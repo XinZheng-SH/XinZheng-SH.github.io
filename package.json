@@ -1,14 +1,14 @@
 {
-    "name": "by-blog",
-    "title": "BY Blog",
-    "author": "BY <qiubaiyingios@163.com>",
+    "name": "Xin-Blog",
+    "title": "Xin-Blog",
+    "author": "ZX <xin.zheng1024@gmail.com>",
     "version": "1.7.0",
-    "homepage": "http://qiubaiying.github.io",
+    "homepage": "http://XinZheng-SH.github.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/qiubaiying/qiubaiying.github.io"
+        "url": "https://github.com/XinZheng-SH/XinZheng-SH.github.io"
     },
-    "bugs": "https://github.com/qiubaiying/qiubaiying.github.io/issues",
+    "bugs": "https://github.com/XinZheng-SH/XinZheng-SH.github.io/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",
