@@ -1,3 +1,15 @@
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      Design Guidelie On My HCI homework 				# 标题 
+subtitle:   How to set your guideline before designing #副标题
+date:       2020-03-30 				# 时间
+author:     Xin 						# 作者
+header-img: img/post-emergency-bg.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - HCI
+---
+
 ### Design guideline in HCI
 
 > [The UX Book - Chapter 22 By Rex Hartson ; Pardha S. Pyla][01]
