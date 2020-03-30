@@ -44,15 +44,15 @@ But we want users ~~not to use it under normal circumstances~~ to avoid panic an
 
 ## Translation Part
 
-#### Help users predict outcome of actions  
+### Help users predict outcome of actions  
 
 > Users need feed-forward in cognitive affordances that explains the consequences of physical actions, such as clicking on a button.  
 
-#### Help users determine what to do to get started  
+### Help users determine what to do to get started  
 
 > Users need support in understanding what actions to take for the first step of a particular task, the “getting started” step, often the most difficult part of a task.  
 
-#### Find ways to anticipate and avoid user errors in your design  
+### Find ways to anticipate and avoid user errors in your design  
 
 > Anticipating user errors in the workflow, of course, stems back to contextual inquiry and contextual analysis, and concern for avoiding errors continues throughout requirements, design, and UX evaluation.
 
