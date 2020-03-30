@@ -24,54 +24,56 @@ Besides, If you're being beaten, bullied, or in an emergency, and the police or 
 
 But we want users ~~not to use it under normal circumstances~~ to avoid panic and waste of resources. In general, the APP is designed to be used in the event of *major life and property security damage*.
 
+### Content
+
 1. [Planning](#Planning-Part)
 2. [Translation](#Translation-Part)
 3. [Physical actions](#Physical-actions-part)
 4. [Outcomes](#Outcomes-part)
 5. [Assessment](#Assessment-part)
 
-##### Planning Part
+## Planning Part
 
-###### Help users decompose tasks logically: 
+### Help users decompose tasks logically: 
 
 >  breaking long, complex tasks into smaller, simpler pieces
 
-###### Make clear all possibilities for what users can do at every point 
+### Make clear all possibilities for what users can do at every point 
 
 > Help users understand how to get started and what to do next.  
 
-##### Translation Part
+## Translation Part
 
-###### Help users predict outcome of actions  
+#### Help users predict outcome of actions  
 
 > Users need feed-forward in cognitive affordances that explains the consequences of physical actions, such as clicking on a button.  
 
-###### Help users determine what to do to get started  
+#### Help users determine what to do to get started  
 
 > Users need support in understanding what actions to take for the first step of a particular task, the “getting started” step, often the most difficult part of a task.  
 
-###### Find ways to anticipate and avoid user errors in your design  
+#### Find ways to anticipate and avoid user errors in your design  
 
 > Anticipating user errors in the workflow, of course, stems back to contextual inquiry and contextual analysis, and concern for avoiding errors continues throughout requirements, design, and UX evaluation.
 
-##### Physical actions part
+## Physical actions part
 
-###### Design physical movement to avoid physical overshoot  
+### Design physical movement to avoid physical overshoot  
 
 > Just as in the case of cursor movement, other kinds of physical actions can be at
 > risk for overshoot, extending the movement beyond what was intended.  
 >
 > In my case, it can be double check and obvious warning of wrong use.
 
-##### Outcomes part
+## Outcomes part
 
-###### Let system response time short
+### Let system response time short
 
 > It will definitely cause the anxious for users if they fell the app responses slowly
 
-##### Assessment part
+## Assessment part
 
-##### Feedback is important
+### Feedback is important
 
 > Make feedback visible  
 >
