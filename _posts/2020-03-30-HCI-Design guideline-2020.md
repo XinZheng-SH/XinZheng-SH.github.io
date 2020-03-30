@@ -22,7 +22,7 @@ For example, you are a girl and is walking back to your accommodation along. You
 
 Besides, If you're being beaten, bullied, or in an emergency, and the police or rescue workers nearby can't get there in time, the APP lets you call someone nearby to help.
 
-But we want users ~~not to use it under normal circumstances~~ to avoid panic and waste of resources. In general, the APP is designed to be used in the event of ==major life and property security damage==.
+But we want users ~~not to use it under normal circumstances~~ to avoid panic and waste of resources. In general, the APP is designed to be used in the event of *major life and property security damage*.
 
 1. [Planning](#Planning Part)
 2. [Translation](#Translation Part)
