@@ -12,7 +12,7 @@ tags:								#标签
 
 ### Design guideline in HCI
 
-> [The UX Book - Chapter 22 By Rex Hartson ; Pardha S. Pyla][01]
+> The UX Book - Chapter 22 By Rex Hartson ; Pardha S. Pyla
 
 UX = User Experience :smile_cat:
 
@@ -81,5 +81,6 @@ But we want users ~~not to use it under normal circumstances~~ to avoid panic an
 
 
 
-[01]:   Rex Hartson, & Pardha S. Pyla. (2012). The UX Book. Elsevier Science.
+Reference:
+> Rex Hartson, & Pardha S. Pyla. (2012). The UX Book. Elsevier Science.
 
