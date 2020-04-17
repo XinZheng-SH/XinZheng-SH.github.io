@@ -16,7 +16,8 @@
 ## 计算机语言学习目录
 * 后端语言
 - [x] Python
-- [ ] Java(学习中)
+- [ ] Java(学习中)<br>
+推荐课程：[Berkeley 61B Java + Data Structure](https://inst.eecs.berkeley.edu/~cs61b/sp20/)
 - [ ] C/C++
 - [ ] To be continued
 * 前端/数据库
