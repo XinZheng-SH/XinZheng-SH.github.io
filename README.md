@@ -17,6 +17,9 @@
 * 后端语言
 - [x] Python
 - [ ] Java(学习中)
+1. [Berkeley 61B Java + Data Structure](https://inst.eecs.berkeley.edu/~cs61b/sp20/)
+2. [翁恺Java设计入门](https://www.bilibili.com/video/BV1LW411C7gy?from=search&seid=15429377068555120011)
+3. [AJR](https://github.com/XinZheng-SH/XinZheng-SH.github.io/blob/master/books/A%20Java%20Reference.pdf)
 - [ ] C/C++
 - [ ] To be continued
 * 前端/数据库
