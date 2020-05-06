@@ -1,0 +1,138 @@
+---
+layout:     post   				    
+title:      写一个Comparable类再排序				
+subtitle:   自己整一个扑克牌数组玩玩？
+date:       2020-05-06 				
+author:     Xin 						
+header-img: img/post-card-bg.jpg 	
+catalog: true 						
+tags:								
+    - Java
+	- Data Structure
+	- Algorithm
+---
+
+## Comparable接口
+
+java.lang.Comparable 接口定义的 compareTo() 方法用于提供对其实现类的对象进行整体排序所需要的比较逻辑。
+实现类基于 compareTo() 方法的排序被称为自然排序。而 compareTo() 方法的排序被称为它的自然排序。具体的排序原则可由实现类根据需要而定。
+
+```java
+public class Card implements Comparable{}
+```
+
+人话：应用了comparable接口，重写了compareTo方法，就可以进行比较、排序
+
+## 任务1：实现一个Card类，应用Comparable接口
+
+[Card.java](https://github.com/XinZheng-SH/Data-Structure-and-Algorithm/blob/master/Codes/Card.java)
+
+对于一个扑克牌而言，它有两个属性，其一是【花色】，其二是【牌值】。
+
+花色可以分为：{黑桃，红桃，梅花，方块}
+
+牌值可以以（1-13）代替，也可以更规范使用2345678910JQKA。使用后者就需要在类中额外对字母和数字的大小进行赋值比较，因为默认的大于，小于是以ASCII码比较，和我们对扑克牌大小的认知不同。
+
+因此，我们创建的Card类应该传递两个参数（花色，牌值）
+
+在类的内部，还需要考虑如何比较花色的大小，比较简单粗暴的方式是为花色进行对应的赋值（switch或if/else），利用赋值和compare to自定义你心中的花色大小顺序。
+
+大小王的实现也已加入，在CardSort中未加入实例，本质上是没区别的，为了方便偷懒了。
+
+```python
+public class Card implements Comparable<Card> {
+
+    private final int number;
+    private final String suit;
+    private int suitValue = 0;
+
+    public Card(String s, int n){
+        number = n;
+        suit = s;
+        switch (s) {
+            case "HEITAO" -> suitValue = 1;
+            case "HONGTAO" -> suitValue = 2;
+            case "MEIHUA" -> suitValue = 3;
+            case "FANGKUAI" -> suitValue = 4;
+            default -> throw new IllegalArgumentException();
+        }
+    }
+    
+    // 实现大小王的实例化
+    public Card(String s){
+        number = 0;
+        suit = s;
+        if (s.equals("XIAOWANG")){suitValue = 0;}
+        else if (s.equals("DAWANG")){suitValue = -1;}
+        else{throw new IllegalArgumentException();}
+    }
+
+    @Override
+    public int compareTo(Card card) {
+        if (this.suitValue < card.suitValue){return 1;}
+        if (this.suitValue > card.suitValue){return -1;}
+        if (this.number > card.number){
+            return 1;
+        }else if (this.number < card.number){
+            return -1;
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString(){
+        return suit + number;
+    }
+}
+
+```
+
+在代码中，无论给黑桃设定的suitValue是1还是4，最终实现它”大“或”小“是在compareTo中完成。1代表大，-1代表小。因此，value=1的黑桃实际是最大的花色。
+
+重写toString是为了直观看到输出的结果。
+
+## 任务2 创建一套随机的牌并重新排序
+
+[CardSort.java](https://github.com/XinZheng-SH/Data-Structure-and-Algorithm/blob/master/Codes/CardSort.java)
+
+关于具体的排序实现，请见[Sort.java](https://github.com/XinZheng-SH/Data-Structure-and-Algorithm/blob/master/Codes/Sort.java)
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class CardSort {
+
+    public static void main(String[] args) {
+
+        List<Card> cardList = new ArrayList<>();
+        String[] suits = new String[4];
+        suits[0] = "HEITAO";
+        suits[1] = "MEIHUA";
+        suits[2] = "FANGKUAI";
+        suits[3] = "HONGTAO";
+        for (String suit : suits) {
+            for (int i = 1; i < 14; i++) {
+                Card card = new Card(suit, i);
+                cardList.add(card);
+            }
+        }
+        Collections.shuffle(cardList);
+        Card[] cards = new Card[52];
+        for (int n = 0; n < cards.length; n++){
+            cards[n] =  cardList.get(n);
+        }
+        System.out.println("Before sorting: " + Arrays.toString(cards));
+        Sort.insertionSort(cards);
+        System.out.println("After sorting: " + Arrays.toString(cards));
+
+    }
+
+}
+//Before sorting: [HEITAO13, MEIHUA7, HONGTAO4, MEIHUA12, FANGKUAI10, MEIHUA9, HEITAO5, HEITAO10, FANGKUAI6, FANGKUAI9, MEIHUA13, HEITAO6, HEITAO11, HONGTAO5, FANGKUAI12, MEIHUA10, HONGTAO3, HEITAO9, HONGTAO1, HEITAO8, FANGKUAI4, HONGTAO12, FANGKUAI5, HONGTAO13, MEIHUA11, HONGTAO9, HEITAO3, FANGKUAI1, HONGTAO6, FANGKUAI13, HONGTAO8, MEIHUA6, MEIHUA8, HEITAO4, FANGKUAI2, HONGTAO11, HONGTAO10, FANGKUAI3, HEITAO2, MEIHUA5, HONGTAO2, HEITAO1, HEITAO7, HEITAO12, HONGTAO7, MEIHUA2, FANGKUAI8, MEIHUA4, FANGKUAI7, MEIHUA1, MEIHUA3, FANGKUAI11]
+//After sorting: [FANGKUAI1, FANGKUAI2, FANGKUAI3, FANGKUAI4, FANGKUAI5, FANGKUAI6, FANGKUAI7, FANGKUAI8, FANGKUAI9, FANGKUAI10, FANGKUAI11, FANGKUAI12, FANGKUAI13, MEIHUA1, MEIHUA2, MEIHUA3, MEIHUA4, MEIHUA5, MEIHUA6, MEIHUA7, MEIHUA8, MEIHUA9, MEIHUA10, MEIHUA11, MEIHUA12, MEIHUA13, HONGTAO1, HONGTAO2, HONGTAO3, HONGTAO4, HONGTAO5, HONGTAO6, HONGTAO7, HONGTAO8, HONGTAO9, HONGTAO10, HONGTAO11, HONGTAO12, HONGTAO13, HEITAO1, HEITAO2, HEITAO3, HEITAO4, HEITAO5, HEITAO6, HEITAO7, HEITAO8, HEITAO9, HEITAO10, HEITAO11, HEITAO12, HEITAO13]
+
+```
+
