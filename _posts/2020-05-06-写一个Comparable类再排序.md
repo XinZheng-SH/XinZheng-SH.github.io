@@ -1,15 +1,14 @@
 ---
 layout:     post   				    
-title:      写一个Comparable类再排序				
-subtitle:   自己整一个扑克牌数组玩玩？
+title:      基础的排序问题				
+subtitle:   Comparable和compareTo
 date:       2020-05-06 				
 author:     Xin 						
 header-img: img/post-card-bg.jpg 	
 catalog: true 						
 tags:								
-    - Java
-	- Data Structure
-	- Algorithm
+    - Java - Data Structure - Algorithm
+    
 ---
 
 ## Comparable接口
