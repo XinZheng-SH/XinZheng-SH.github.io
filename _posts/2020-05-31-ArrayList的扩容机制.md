@@ -12,8 +12,8 @@
 
 ## ArrayList
 
-ArrayList是一个数组，但却结合了List中列表元素可无线增长的特点。所以我认为它的名字起得非常好。首先，ArrayList的构造方法使用了泛型，也就是说，假如想实现一个int的ArrayList：
-`ArrayList al = new ArrayList();`或`ArrayList al = new ArrayList<Integet>();`这些属于泛型的概念，不在此提及。
+ArrayList表面上是列表，实现了List接口并继承于AbstractList类，但底层的数据结构和操作方法都是基于数组的，所以可以说它结合了两者的很多概念。ArrayList的构造方法使用了泛型，也就是说，假如想实现一个int的ArrayList：
+`ArrayList al = new ArrayList();`或`ArrayList al = new ArrayList<Integet>();`
 
 此外，ArrayList对于不设定初始数组长度的对象，会赋予一个默认的长度，`private static final int DEFAULT_CAPACITY = 10;`
 
